@@ -14,7 +14,7 @@ class Channel {
     _fader: Gain
     _output
     
-    constructor(destination: any, out: number) {
+    constructor(destination: any, out: number = 0) {
         this._destination = destination
         this._out = out
 

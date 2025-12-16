@@ -40,10 +40,8 @@ export const getChannel = (channel: number, out: number) => {
         ['fx0', 'fx1', 'fx2', 'fx3'].forEach((id: string, i: number) => {
             channels[channel].routeFxBus(i, fxChannels[id].input)
         });
+        channels[channel].routeOut(out)
     }
-
-    // if the output is different, route it to the new output
-    channels[channel].routeOut(out)
     
     // return the channel strip
     return channels[channel]
